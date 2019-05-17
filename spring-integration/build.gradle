@@ -1,0 +1,20 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'itsj.research'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-integration'
+	compile group: 'org.springframework.integration', name: 'spring-integration-file', version: '5.1.4.RELEASE'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
